@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Mission6.Models;
 
 namespace Mission6.Controllers;
@@ -39,4 +40,15 @@ public class HomeController : Controller
         
         return View("Confirmation", response); //posting the confirmation page once the movie is submitted
     }
+
+
+    public IActionResult AllMovies()
+    {
+        var movies =_context.Movies
+            .Include(x => x.MovieCategory)
+            .OrderBy(x => x.MovieTitle).ToList();
+
+        return View();
+    }
+    
 }
