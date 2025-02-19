@@ -32,7 +32,7 @@ namespace Mission6.Migrations
                     b.Property<string>("LentTo")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("MovieCategory")
+                    b.Property<string>("CategoryName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

@@ -45,10 +45,10 @@ public class HomeController : Controller
     public IActionResult AllMovies()
     {
         var movies =_context.Movies
-            .Include(x => x.MovieCategory)
+            .Include(x => x.CategoryName)
             .OrderBy(x => x.MovieTitle).ToList();
 
-        return View();
+        return View(movies);
     }
     
 }

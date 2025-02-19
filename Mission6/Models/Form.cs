@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mission6.Models;
 
@@ -11,7 +12,9 @@ public class Form
     [Required]
     public string MovieTitle { get; set; }
     [Required]
-    public string MovieCategory { get; set; }
+    [ForeignKey("CategoryId")]
+    public string CategoryId { get; set; }
+    public Categories Category { get; set; }
     [Required]
     public string ReleaseYear { get; set; }
     [Required]
@@ -21,6 +24,7 @@ public class Form
     public string? Edited { get; set; }
     public string? LentTo { get; set; }
     [MaxLength(25)] // make the length max 25
+    public string? CopiedToPlex { get; set; }
     public string? Notes { get; set; }
     
 }
