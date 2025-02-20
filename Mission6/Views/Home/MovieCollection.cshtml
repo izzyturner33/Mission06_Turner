@@ -5,8 +5,8 @@
 <form method="post">
     <input type="hidden" asp-for="MovieId" />
     
-    <label asp-for="MovieTitle">Movies Title:</label>
-    <input asp-for="MovieTitle"/>
+    <label asp-for="Title">Movies Title:</label>
+    <input asp-for="Title"/>
     <br/>
     <select asp-for="CategoryId">
         <option value="">Select a Category</option>
@@ -16,8 +16,8 @@
         }
     </select>
     <br/>
-    <label asp-for="ReleaseYear">Release Year:</label>
-    <input asp-for="ReleaseYear"/>
+    <label asp-for="Year">Release Year:</label>
+    <input asp-for="Year"/>
     <br/>
     <label asp-for="Director">Director:</label>
     <input asp-for="Director"/>
@@ -32,16 +32,20 @@
     <br/>
     <label asp-for="Edited">Is this film edited?</label>
     <select asp-for="Edited">
-        <option value="Null"> </option>
-        <option value="Yes">Yes</option>
-        <option value="No">No</option>
+        <option value="">Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
     </select>
     <br/>
     <label asp-for="LentTo">Lent To:</label>
     <input asp-for="LentTo"/>
     <br/>
     <label asp-for="CopiedToPlex">Copied To Plex:</label>
-    <input asp-for="CopiedToPlex"/>
+    <select asp-for="CopiedToPlex">
+        <option value="">Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select>
     <br/>
     <label asp-for="Notes">Notes:</label>
     <input asp-for="Notes"/>

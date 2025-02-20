@@ -56,7 +56,7 @@ public class HomeController : Controller
     {
         var movies = _context.Movies
             .Include(x => x.Categories) // Ensures the Categories entity is included
-            .OrderBy(x => x.MovieTitle)
+            .OrderBy(x => x.Title)
             .ToList();
 
         return View(movies);
