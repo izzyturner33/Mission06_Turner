@@ -4,22 +4,23 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Mission6.Models;
 
 // make the first fields required and the last three not required
-public class Form
+public class Movies
 {
     [Key]
     [Required]
-    public int FormId { get; set;  }
-    [Required]
+    public int MovieId { get; set;  }
+    [Required(ErrorMessage = "Title is required")]
     public string MovieTitle { get; set; }
     [Required]
     [ForeignKey("CategoryId")]
     public string CategoryId { get; set; }
-    public Categories Category { get; set; }
-    [Required]
+    [Required(ErrorMessage = "Category is required")]
+    public Categories Categories { get; set; }
+    [Required(ErrorMessage = "Release year is required")]
     public string ReleaseYear { get; set; }
-    [Required]
+    [Required(ErrorMessage = "Director is required")]
     public string Director { get; set; }
-    [Required]
+    [Required(ErrorMessage = "Rating is required")]
     public string Rating { get; set; }
     public string? Edited { get; set; }
     public string? LentTo { get; set; }

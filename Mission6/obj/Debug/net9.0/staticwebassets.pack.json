@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/Mission6.dhcnszfd6z.bundle.scp.css"
     },
     {
+      "Id": "/Users/isabelleturner/RiderProjects/Mission6/Mission6/wwwroot/JoelHiltonMovieCollection.sqlite",
+      "PackagePath": "staticwebassets/JoelHiltonMovieCollection.sqlite"
+    },
+    {
       "Id": "/Users/isabelleturner/RiderProjects/Mission6/Mission6/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },

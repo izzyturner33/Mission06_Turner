@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RpHk/hYwfVMsjBE5CHJnmgPMifUDSq9J4XJ5xIVvGcg=",
+  "Hash": "jvhGQarUx5UoNtBu0iIZGy1WnY8/Jnex3p/fW9v5ozk=",
   "Source": "Mission6",
   "BasePath": "_content/Mission6",
   "Mode": "Default",
@@ -1485,6 +1485,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/JoelHilton.jpeg"
+    },
+    {
+      "Identity": "/Users/isabelleturner/RiderProjects/Mission6/Mission6/wwwroot/JoelHiltonMovieCollection.sqlite",
+      "SourceId": "Mission6",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/isabelleturner/RiderProjects/Mission6/Mission6/wwwroot/",
+      "BasePath": "_content/Mission6",
+      "RelativePath": "JoelHiltonMovieCollection#[.{fingerprint}]?.sqlite",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ti3jnmvy50",
+      "Integrity": "lZfhdndhTPBaZZWlKBZEHZlbB+zlZpU0UEdbiI3rits=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/JoelHiltonMovieCollection.sqlite"
     },
     {
       "Identity": "/Users/isabelleturner/RiderProjects/Mission6/Mission6/wwwroot/js/site.js",
@@ -3526,6 +3547,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-qboWzoBy3Yzz/jXZp3bmqUv7rAXX2lf8lsCjSk3StGQ="
+        }
+      ]
+    },
+    {
+      "Route": "JoelHiltonMovieCollection.sqlite",
+      "AssetFile": "/Users/isabelleturner/RiderProjects/Mission6/Mission6/wwwroot/JoelHiltonMovieCollection.sqlite",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49152"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lZfhdndhTPBaZZWlKBZEHZlbB+zlZpU0UEdbiI3rits=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Feb 2025 19:33:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lZfhdndhTPBaZZWlKBZEHZlbB+zlZpU0UEdbiI3rits="
+        }
+      ]
+    },
+    {
+      "Route": "JoelHiltonMovieCollection.ti3jnmvy50.sqlite",
+      "AssetFile": "/Users/isabelleturner/RiderProjects/Mission6/Mission6/wwwroot/JoelHiltonMovieCollection.sqlite",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49152"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lZfhdndhTPBaZZWlKBZEHZlbB+zlZpU0UEdbiI3rits=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Feb 2025 19:33:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ti3jnmvy50"
+        },
+        {
+          "Name": "label",
+          "Value": "JoelHiltonMovieCollection.sqlite"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lZfhdndhTPBaZZWlKBZEHZlbB+zlZpU0UEdbiI3rits="
         }
       ]
     },

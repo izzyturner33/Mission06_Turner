@@ -2,12 +2,12 @@
 @{
     Layout = null;
 }
-@model List<Form>
+@model List<Movies>
 <table class="table table-bordered">
     <thead class="fw-bold">
     <tr>
-        <td>Movie Title</td>
-        <td>CategoryName</td>
+        <td>Movies Title</td>
+        <td>CategoriesName</td>
         <td>Release Year</td>
         <td>Director</td>
         <td>Rating</td>
@@ -24,7 +24,7 @@
         <tbody>
         <tr>
             <td>@x.MovieTitle</td>
-            <td>@x.CategoryName</td>
+            <td>@x.Categories.CategoryName</td>
             <td>@x.ReleaseYear</td>
             <td>@x.Director</td>
             <td>@x.Rating</td>
@@ -32,6 +32,9 @@
             <td>@x.LentTo</td>
             <td>@x.CopiedToPlex</td>
             <td>@x.Notes</td>
+
+            <td><a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@x.MovieId">Edit</a></td>
+            <td><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@x.MovieId">Delete</a></td>
         </tr>
         
         </tbody>

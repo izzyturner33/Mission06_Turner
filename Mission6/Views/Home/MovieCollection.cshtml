@@ -1,17 +1,19 @@
-@model Mission6.Models.Form
+@model Mission6.Models.Movies
 <!--form to submit a movie collection-->
-<h1>Movie Collection Form</h1>
+<h1>Movies Collection Movies</h1>
 
 <form method="post">
-    <label asp-for="MovieTitle">Movie Title:</label>
+    <input type="hidden" asp-for="MovieId" />
+    
+    <label asp-for="MovieTitle">Movies Title:</label>
     <input asp-for="MovieTitle"/>
     <br/>
-    <label asp-for="CategoryName">CategoryName:</label>
-    <select asp-for="CategoryName">
-        <option value="Action">Action</option>
-        <option value="Comedy">Comedy</option>
-        <option value="Drama">Drama</option>
-        <option value="Romance">Romance</option>
+    <select asp-for="CategoryId">
+        <option value="">Select a Category</option>
+        @foreach (Categories c in ViewBag.Categories)
+        {
+            <option value="@c.CategoryId">@c.CategoryName</option>
+        }
     </select>
     <br/>
     <label asp-for="ReleaseYear">Release Year:</label>
@@ -45,7 +47,8 @@
     <input asp-for="Notes"/>
     <br/>
 
-    <button type="submit">Submit Movie</button>
+    <button type="submit">Submit Movies</button>
 
+    <div asp-validation-summary="All"></div>
 </form>
 
