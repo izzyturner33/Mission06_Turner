@@ -29,12 +29,12 @@ public class HomeController : Controller
     public IActionResult MovieCollection() //the get for the form
     {
         ViewBag.Categories = _context.Categories.ToList();
-        return View("MovieCollection", new Movies());
+        return View("MovieCollection", new Movie());
     }
     
     
     [HttpPost]
-    public IActionResult MovieCollection(Movies response) //the post for the form
+    public IActionResult MovieCollection(Movie response) //the post for the form
     {
         if (ModelState.IsValid)
         {
@@ -55,7 +55,7 @@ public class HomeController : Controller
     public IActionResult AllMovies()
     {
         var movies = _context.Movies
-            .Include(x => x.Categories) // Ensures the Categories entity is included
+            .Include(x => x.Categories) // Ensures the Category entity is included
             .OrderBy(x => x.Title)
             .ToList();
 
@@ -75,7 +75,7 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult Edit(Movies updatedMovie)
+    public IActionResult Edit(Movie updatedMovie)
     {
         if (ModelState.IsValid)
         {
@@ -104,7 +104,7 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult Delete(Movies movie)
+    public IActionResult Delete(Movie movie)
     {
         _context.Movies.Remove(movie);
         _context.SaveChanges();
