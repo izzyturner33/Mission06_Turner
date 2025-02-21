@@ -1,13 +1,14 @@
 
 @{
-    Layout = null;
+
 }
-@model List<Movie>
+@model List<Movie>  
+
 <table class="table table-bordered">
     <thead class="fw-bold">
     <tr>
         <td>Movie Title</td>
-        <td>CategoryName</td>
+        <td>Category</td>
         <td>Release Year</td>
         <td>Director</td>
         <td>Rating</td>
@@ -15,29 +16,39 @@
         <td>Lent To</td>
         <td>Copied To Plex</td>
         <td>Notes</td>
+        <td>Actions</td>
     </tr>
-    
     </thead>
-    
-    @foreach (var x in Model)
+
+    <tbody>
+    @foreach (var x in Model)  
     {
-        <tbody>
         <tr>
+            <!-- Display movie details -->
             <td>@x.Title</td>
-            <td>@x.Categories.CategoryName</td>
+                
+            <!-- Ensure category exists before displaying -->
+            <td>
+                @if (x.Categories != null)  
+                {
+                    @x.Categories.CategoryName  
+                }
+            </td>
+
             <td>@x.Year</td>
             <td>@x.Director</td>
             <td>@x.Rating</td>
-            <td>@x.Edited</td>
+
+            <!-- Convert numeric values to Yes/No format -->
+            <td>@(x.Edited == 1 ? "Yes" : "No")</td>
             <td>@x.LentTo</td>
-            <td>@x.CopiedToPlex</td>
+            <td>@(x.CopiedToPlex == 1 ? "Yes" : "No")</td>
             <td>@x.Notes</td>
 
+            <!-- Edit and Delete action buttons -->
             <td><a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@x.MovieId">Edit</a></td>
             <td><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@x.MovieId">Delete</a></td>
         </tr>
-        
-        </tbody>
     }
-    
+    </tbody>
 </table>

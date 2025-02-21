@@ -1,15 +1,16 @@
 
 
 @{
-    Layout = null;
+
 }
-@model Movie
+@model Movie 
 
 <h2>Confirm Deletion</h2>
-<h3>@Model.Title</h3>
+<h3>@Model.Title</h3>  <!-- Displays the movie title -->
+
 <form method="post">
-    <input type="hidden" asp-for="MovieId" />
-    
-    <button type="submit">Delete</button>
+    <input type="hidden" asp-for="MovieId" />  <!-- Retains the Movie ID -->
+
+    <button type="submit" class="btn btn-danger">Delete</button>  
     <a class="btn btn-info" asp-controller="Home" asp-action="AllMovies">Cancel</a>
 </form>
