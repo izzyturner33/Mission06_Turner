@@ -21,6 +21,7 @@ public class Movies
     public Categories Categories { get; set; }
     
     [Required(ErrorMessage = "Release year is required")]
+    [Range(1888, 2025)]
     public int Year { get; set; }
     
     [Required(ErrorMessage = "Director is required")]
